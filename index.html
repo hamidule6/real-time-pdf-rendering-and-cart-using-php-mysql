@@ -1,0 +1,29 @@
+<!DOCKTYPE html>
+<html>
+	<head>
+		<title> This page shows the pdf rendering</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	
+	<body>
+		<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="Cart.php">Products</a>
+    <a href="#signup">Signup</a>
+  </div>
+		<div class="container">
+			<div id="viewpdf">
+				
+			</div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+	<script>
+		var viewpdf = $("#viewpdf")
+		
+		PDFObject.embed("output.pdf#toolbar=0",viewpdf)
+	</script>
+</html>
